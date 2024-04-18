@@ -1,0 +1,18 @@
+services:
+  
+  host:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: host
+    ports:
+      - "80:80"
+
+    volumes:
+      - ./:/var/www/html
+      
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /var/www/html

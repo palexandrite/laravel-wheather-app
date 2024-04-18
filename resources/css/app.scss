@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    ::selection {
+        background: #fed7aa; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        background: #fed7aa; /* Gecko Browsers */
+    }
+
+    :root {
+        font-family: 'Arial', sans-serif;
+    }
+
+}
